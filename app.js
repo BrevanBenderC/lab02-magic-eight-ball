@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+//equations to roatate each character in spinning section
+const text = document.querySelector('.text');
+text.innerHTML = text.textContent.replace(/\S/g, '<span>$&</span>');
 
-// initialize global state
+const element = document.querySelectorAll('span');
+for (let i = 0; i < element.length; i++){
+    element[i].style.transform = 'rotate(' + i * 4.1 + 'deg)';
+}
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
